@@ -1,44 +1,137 @@
-
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <title>Barakahtech</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barakahtech VTU</title>
   <style>
     body{
-      font-family: Arial;
-      background:#f4f4f4;
-      text-align:center;
-      padding:40px;
-    }
-    h1{
-      color:green;
-      font-size:40px;
-    }
-    p{
-      font-size:20px;
-      color:#333;
-    }
-    .btn{
-      background:green;
-      color:white;
-      padding:12px 25px;
-      text-decoration:none;
-      border-radius:5px;
-      display:inline-block;
-      margin-top:20px;
-    }
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f4f6f8;
+    }header{
+  background:green;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+header h1{
+  margin:0;
+  font-size:28px;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  background:#0b6623;
+  padding:10px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.hero{
+  text-align:center;
+  padding:50px 20px;
+  background:white;
+}
+
+.hero h2{
+  font-size:32px;
+  color:#222;
+}
+
+.hero p{
+  font-size:18px;
+  color:#555;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  background:green;
+  color:white;
+  border-radius:5px;
+  text-decoration:none;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:15px;
+  padding:30px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  color:green;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#0b6623;
+  color:white;
+  margin-top:20px;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
   </style>
 </head>
-<body>
+<body><header>
+  <h1>Barakahtech VTU Services</h1>
+</header><nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav><section class="hero">
+  <h2>Fast & Reliable VTU Services</h2>
+  <p>Buy Airtime, Data, Pay Bills and more instantly with Barakahtech.</p>
+  <a class="btn" href="https://wa.me/2349015053976">Get Started</a>
+</section><section id="services" class="services">
+  <div class="card">
+    <h3>Airtime Top-up</h3>
+    <p>Buy airtime for all networks instantly.</p>
+  </div>  <div class="card">
+    <h3>Data Subscription</h3>
+    <p>Cheap and fast data plans.</p>
+  </div>  <div class="card">
+    <h3>Bill Payment</h3>
+    <p>Pay electricity and cable bills easily.</p>
+  </div>  <div class="card">
+    <h3>Support</h3>
+    <p>24/7 customer support via WhatsApp.</p>
+  </div>
+</section><section id="contact" class="hero">
+  <h2>Contact Us</h2>
+  <p>Click below to chat with us on WhatsApp</p>
+  <a class="btn" href="https://wa.me/2349015053976">Chat on WhatsApp</a>
+</section><a class="whatsapp" href="https://wa.me/2349015053976">WhatsApp</a>
 
-<h1>Welcome to Barakahtech</h1>
-
-<p>
-Barakahtech organization and digital services website.
-We offer technology solutions, digital services, and community development support.
-</p>
-
-<a class="btn" href="https://wa.me/2349015053976">Contact Us</a>
-
-</body>
+<footer>
+  <p>&copy; 2026 Barakahtech. All rights reserved.</p>
+</footer></body>
 </html>

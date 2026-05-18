@@ -1,2 +1,44 @@
-# Barakah-tech-website-
-Official website for Barakahtech organization and digital services.
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barakahtech</title>
+  <style>
+    body{
+      font-family: Arial;
+      background:#f4f4f4;
+      text-align:center;
+      padding:40px;
+    }
+    h1{
+      color:green;
+      font-size:40px;
+    }
+    p{
+      font-size:20px;
+      color:#333;
+    }
+    .btn{
+      background:green;
+      color:white;
+      padding:12px 25px;
+      text-decoration:none;
+      border-radius:5px;
+      display:inline-block;
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome to Barakahtech</h1>
+
+<p>
+Barakahtech organization and digital services website.
+We offer technology solutions, digital services, and community development support.
+</p>
+
+<a class="btn" href="#">Contact Us</a>
+
+</body>
+</html>

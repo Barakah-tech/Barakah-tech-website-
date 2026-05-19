@@ -15,11 +15,6 @@
   text-align:center;
 }
 
-header h1{
-  margin:0;
-  font-size:28px;
-}
-
 nav{
   display:flex;
   justify-content:center;
@@ -32,22 +27,13 @@ nav a{
   color:white;
   text-decoration:none;
   font-weight:bold;
+  cursor:pointer;
 }
 
 .hero{
   text-align:center;
   padding:50px 20px;
   background:white;
-}
-
-.hero h2{
-  font-size:32px;
-  color:#222;
-}
-
-.hero p{
-  font-size:18px;
-  color:#555;
 }
 
 .btn{
@@ -58,6 +44,7 @@ nav a{
   color:white;
   border-radius:5px;
   text-decoration:none;
+  cursor:pointer;
 }
 
 .services{
@@ -75,16 +62,11 @@ nav a{
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card h3{
-  color:green;
-}
-
 footer{
   text-align:center;
   padding:20px;
   background:#0b6623;
   color:white;
-  margin-top:20px;
 }
 
 .whatsapp{
@@ -99,39 +81,96 @@ footer{
   font-weight:bold;
 }
 
+/* LOGIN MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  width:300px;
+  text-align:center;
+}
+
+input{
+  width:90%;
+  padding:10px;
+  margin:10px 0;
+}
+
+.dashboard{
+  display:none;
+  padding:20px;
+  background:white;
+  margin:20px;
+  border-radius:10px;
+}
+
   </style>
 </head>
 <body><header>
   <h1>Barakahtech VTU Services</h1>
 </header><nav>
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav><section class="hero">
+  <a onclick="showHome()">Home</a>
+  <a onclick="showDashboard()">Dashboard</a>
+  <a onclick="openLogin()">Login</a>
+</nav><section id="home" class="hero">
   <h2>Fast & Reliable VTU Services</h2>
-  <p>Buy Airtime, Data, Pay Bills and more instantly with Barakahtech.</p>
+  <p>Buy Airtime, Data, Pay Bills instantly.</p>
   <a class="btn" href="https://wa.me/2349015053976">Get Started</a>
-</section><section id="services" class="services">
-  <div class="card">
-    <h3>Airtime Top-up</h3>
-    <p>Buy airtime for all networks instantly.</p>
-  </div>  <div class="card">
-    <h3>Data Subscription</h3>
-    <p>Cheap and fast data plans.</p>
-  </div>  <div class="card">
-    <h3>Bill Payment</h3>
-    <p>Pay electricity and cable bills easily.</p>
-  </div>  <div class="card">
-    <h3>Support</h3>
-    <p>24/7 customer support via WhatsApp.</p>
+</section><section class="services">
+  <div class="card"><h3>Airtime</h3><p>Instant recharge</p></div>
+  <div class="card"><h3>Data</h3><p>Cheap data plans</p></div>
+  <div class="card"><h3>Bills</h3><p>Pay electricity & cable</p></div>
+  <div class="card"><h3>Support</h3><p>24/7 help</p></div>
+</section><!-- DASHBOARD --><section id="dashboard" class="dashboard">
+  <h2>Welcome to Dashboard</h2>
+  <p>Balance: ₦0.00 (demo)</p>
+  <button class="btn">Buy Airtime</button>
+  <button class="btn">Buy Data</button>
+  <button class="btn">Pay Bills</button>
+  <p style="margin-top:10px;">Payment integration placeholder (Paystack/Flutterwave can be added later)</p>
+</section><!-- LOGIN MODAL --><div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h3>Login</h3>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button class="btn" onclick="login()">Login</button>
+    <p onclick="closeLogin()" style="cursor:pointer;color:red;">Close</p>
   </div>
-</section><section id="contact" class="hero">
-  <h2>Contact Us</h2>
-  <p>Click below to chat with us on WhatsApp</p>
-  <a class="btn" href="https://wa.me/2349015053976">Chat on WhatsApp</a>
-</section><a class="whatsapp" href="https://wa.me/2349015053976">WhatsApp</a>
+</div><a class="whatsapp" href="https://wa.me/2349015053976">WhatsApp</a>
 
 <footer>
-  <p>&copy; 2026 Barakahtech. All rights reserved.</p>
-</footer></body>
-</html>
+  <p>&copy; 2026 Barakahtech</p>
+</footer><script>
+function openLogin(){
+  document.getElementById('loginModal').style.display='flex';
+}
+function closeLogin(){
+  document.getElementById('loginModal').style.display='none';
+}
+function login(){
+  alert('Demo login successful');
+  closeLogin();
+  showDashboard();
+}
+function showDashboard(){
+  document.getElementById('home').style.display='none';
+  document.getElementById('dashboard').style.display='block';
+}
+function showHome(){
+  document.getElementById('home').style.display='block';
+  document.getElementById('dashboard').style.display='none';
+}
+</script></body>
+  </html>
